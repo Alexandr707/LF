@@ -1,0 +1,37 @@
+@import "../../style/vars";
+@import "../../style/mixins";
+
+.footer {
+  font-size: 14px;
+  line-height: 1.5;
+  color: $primary;
+}
+
+.footerContainer {
+  position: relative;
+  margin: 0 -20px;
+  width: calc(100% + 20px * 2);
+
+  padding: $baseOffset;
+  background-color: $EerieBlack;
+}
+
+.footerContent {
+  position: relative;
+  width: 100%;
+
+  padding-top: 70px;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+
+.footerDesr {
+  max-width: 50%;
+}

@@ -1,0 +1,56 @@
+@import "../../style/vars";
+
+.fbCheck {
+  position: relative;
+  height: 30px;
+  margin-right: 15px;
+  padding-left: 35px;
+  // float: left;
+
+  color: black;
+  font-size: 14px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.fbInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+
+  &:checked ~ .fbIcon {
+    background-color: $apple;
+
+    &::after {
+      left: calc(100% - 16px);
+    }
+  }
+}
+
+.fbIcon {
+  position: absolute;
+  width: 30px;
+  height: 12px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $primary;
+  border-radius: 10px;
+  box-shadow: inset 0 0 3px #0005;
+  transition: background 0.3s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 0;
+    background-color: $primary;
+    border-radius: 50%;
+    box-shadow: 0 0 3px #0005;
+    transform: translateY(-50%);
+    transition: left 0.3s;
+  }
+}

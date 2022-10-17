@@ -1,0 +1,48 @@
+@import "../../style/vars";
+
+.PBtn {
+  display: block;
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background: $Jet;
+
+  font-size: 34px;
+  color: $apple;
+  fill: $apple;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: scale 0.3s;
+  cursor: pointer;
+  opacity: 0;
+
+  & i,
+  & svg {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  &_visible {
+    opacity: 1;
+  }
+
+  &_play {
+    padding-left: 10px;
+  }
+}

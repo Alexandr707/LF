@@ -1,0 +1,58 @@
+@import "../../style/vars";
+
+.fInfo {
+  width: 100%;
+  color: $grey;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: "open Sans", sans-serif;
+}
+
+.fTitle {
+  margin-bottom: 15px;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+.fDescription {
+  margin-bottom: $baseOffset;
+}
+.hrSeparator {
+  margin-right: -20px;
+  margin: 0;
+  padding: 0;
+  background-color: $secondary;
+}
+.fCharacters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.fCItem {
+  flex: 0 0 48%;
+
+  &_name,
+  &_acters {
+    color: black;
+    font-weight: 700;
+  }
+
+  &_acters {
+    & span {
+      color: $grey;
+      font-weight: 400;
+    }
+  }
+}
+
+.imdb {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 5px 30px;
+
+  color: black;
+  font-weight: 600;
+  box-shadow: inset 0 0 0 2px #fc0;
+}

@@ -1,0 +1,21 @@
+@import "./vars";
+
+.App {
+  position: relative;
+  background-color: #111111;
+  color: #444;
+  z-index: 0;
+}
+
+.appContainer {
+  position: relative;
+  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 1140px;
+  padding-top: $topOffset;
+}
+.zind_1 {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}

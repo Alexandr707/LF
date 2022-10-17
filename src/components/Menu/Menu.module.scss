@@ -1,0 +1,63 @@
+@import "../../style/vars";
+
+.menu {
+  color: $grey;
+  font-size: 14px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+}
+.menuContainer {
+  position: fixed;
+  padding: 10px;
+  width: calc((170px + 10px * 2) * 3);
+  max-height: 400px;
+  background-color: $primary;
+  border-top: 3px solid $apple;
+  overflow-y: auto;
+  // overflow-x: hidden;
+  z-index: 9999;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $grey;
+    border-radius: 8px;
+  }
+}
+
+.menuList {
+  // width: calc($menuItemWidth + 10px * 2);
+  max-width: calc((170px + 10px * 2) * 3);
+
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.menuItem {
+  flex: 0 0 auto;
+  width: 170px;
+  padding: 5px 10px;
+  color: inherit;
+  font-weight: 500;
+  background-color: transparent;
+  transition: background 0.3s, font 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    color: $EerieBlack;
+    background-color: $apple;
+  }
+  & + & {
+    margin-top: 5px;
+  }
+}
+
+.menuItem_link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}

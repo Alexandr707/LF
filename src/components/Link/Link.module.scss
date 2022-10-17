@@ -1,0 +1,27 @@
+@import "../../style/vars";
+
+.fLink {
+  height: 40px;
+  display: inline-block;
+  padding-left: 10px;
+
+  color: $secondary;
+  fill: inherit;
+  background-color: transparent;
+
+  font-size: 14px;
+  line-height: 40px;
+  text-decoration: none;
+  transition: color 0.3s, fill 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary;
+    fill: $primary;
+  }
+}
+.fLinkIcon {
+  margin-right: 10px;
+  color: inherit;
+  fill: inherit;
+}

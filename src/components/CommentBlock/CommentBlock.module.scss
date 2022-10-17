@@ -1,0 +1,47 @@
+@import "../../style/vars";
+
+.comments {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.commentsContainer {
+  position: relative;
+  width: 100%;
+
+  padding-top: $baseOffset;
+  margin-bottom: $baseOffset;
+
+  background-color: $mainBG;
+}
+
+.commentsTitle {
+  margin-bottom: 10px;
+  color: #444;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.commentsFlex {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (max-width: 730px) {
+    & {
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+
+      .flexItem {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.flexItem {
+  position: relative;
+  // flex: 1 0 48%;
+  width: 48%;
+}

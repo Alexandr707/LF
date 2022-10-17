@@ -1,0 +1,3 @@
+class globalEvents {
+  handlers = {};
+}

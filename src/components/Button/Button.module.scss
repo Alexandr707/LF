@@ -1,0 +1,29 @@
+@import "../../style/vars";
+
+.fbBtn {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 32px;
+
+  color: $primary;
+  font-size: 14px;
+  line-height: 32px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  background-color: $apple;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  box-shadow: inset 0 -3px #6a3;
+
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background-color: $appleLight;
+    box-shadow: none;
+  }
+}

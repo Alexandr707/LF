@@ -1,0 +1,39 @@
+@import "../../style/vars";
+
+.playerPanel {
+  color: $secondary;
+  font-size: 14px;
+  line-height: 40px;
+  border-radius: 8px;
+}
+
+.pContainer {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  bottom: 0;
+  margin: 0 10px;
+
+  height: 40px;
+  width: calc(100% - 20px);
+
+  background-color: $Jet;
+  border-radius: 8px;
+  opacity: 0;
+
+  transition: opacity 0.3s, bottom 0.3s;
+
+  &_visible {
+    opacity: 1;
+    bottom: 10px;
+  }
+}
+
+.ptrackbar {
+  display: flex;
+  flex: 1 1 auto;
+  position: relative;
+  height: 100%;
+}

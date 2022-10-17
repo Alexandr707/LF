@@ -1,0 +1,38 @@
+.emojiRating {
+  position: relative;
+  width: 100%;
+  font-size: 21px;
+  line-height: 30px;
+}
+
+.emojiContainer {
+  position: relative;
+  width: 100%;
+  padding: 10px 0 5px;
+  background-color: #f7f7f7;
+}
+
+.emojiLink {
+  position: relative;
+  width: 11%;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  //   transform: scale(1);
+  transition: font 0.1s;
+
+  &:hover {
+    font-size: 1.7rem;
+    // transform: scale(1.2);
+  }
+}
+
+.emojiStat {
+  display: block;
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 3px;
+  color: rgba(0, 0, 0, 0.5);
+}

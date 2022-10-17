@@ -1,0 +1,24 @@
+@import "../../style/vars";
+
+.emojiContainer {
+  position: relative;
+  width: 100%;
+  margin: 0 0 $baseOffset;
+}
+
+.emoji {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: inherit;
+  line-height: 30px;
+  transition: font 0.1s;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    font-size: 1.4em;
+  }
+}

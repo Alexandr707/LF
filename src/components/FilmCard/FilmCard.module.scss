@@ -1,0 +1,83 @@
+@import "../../style/vars";
+
+.fCard {
+  position: relative;
+  align-self: center;
+  flex: 0 0 auto;
+  width: 200px;
+  height: 280px;
+  margin-right: $baseOffset;
+  margin-bottom: 50px;
+  @media (max-width: 650px) {
+    margin-right: 0;
+  }
+}
+
+.fImage {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  object-fit: contain;
+}
+
+.fSocial {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 45px;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 45px;
+  box-shadow: inset 0 0 3px #0005;
+  background-color: $primary;
+}
+
+.fLike,
+.fDislike {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5px;
+  height: 100%;
+  cursor: pointer;
+}
+.fLike {
+  flex-direction: row;
+}
+.fDislike {
+  flex-direction: row-reverse;
+}
+
+.fIcon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: $primary;
+  fill: $primary;
+
+  &_left {
+    background-color: #33a42d;
+    margin-right: 5px;
+  }
+  &_right {
+    background-color: #dd4d1b;
+    margin-left: 5px;
+  }
+
+  & svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

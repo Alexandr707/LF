@@ -1,0 +1,55 @@
+@import "../../style/vars";
+
+.RCheck {
+  position: relative;
+  padding-left: 45px;
+  height: 40px;
+
+  color: $secondary;
+  font-size: 14px;
+  line-height: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.RCInput {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  font-size: 0;
+
+  &:checked ~ .RCIcon::after {
+    left: calc(100% - 18px);
+    background-color: $apple;
+  }
+}
+
+.RCIcon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 40px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: $Jet;
+  transform: translateY(-50%);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    background-color: #ffda13;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 30%);
+    transform: translateY(-50%);
+    transition: left 0.3s, background 0.3s;
+  }
+}

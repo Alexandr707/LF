@@ -1,0 +1,82 @@
+@import "../../style/vars";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  width: calc(100% - $baseOffset * 2);
+  height: $headerHeight;
+  background-color: $primary;
+
+  @media (max-width: 950px) {
+    .menuNav,
+    .search,
+    .loginBtn {
+      display: none;
+    }
+  }
+}
+
+.menuNav {
+  display: flex;
+  padding: 0 20px 0 40px;
+  height: $headerHeight;
+  font-family: "Oswald";
+
+  li {
+    margin-right: 20px;
+  }
+}
+
+.menuItem {
+  display: block;
+  height: $headerHeight;
+  opacity: 0.6;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: $headerHeight;
+
+  transition: color 0.3s;
+
+  &:hover {
+    color: $apple;
+  }
+}
+
+.logo {
+  width: 180px;
+  height: $headerHeight;
+}
+
+.search {
+  position: relative;
+  flex-grow: 1;
+  min-width: 50px;
+  max-width: 100%;
+  height: $searchHeight;
+}
+
+.loginBtn {
+  height: $searchHeight;
+  padding: 0 20px;
+  margin-left: 10px;
+  color: white;
+  background-color: $apple;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.menubtn {
+  display: none;
+  @media (max-width: 950px) {
+    display: block;
+  }
+}

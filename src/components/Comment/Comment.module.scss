@@ -1,0 +1,128 @@
+@import "../../style/vars";
+
+.commentItem {
+  position: relative;
+  width: 100%;
+  padding-left: 40px;
+  margin-bottom: $baseOffset;
+}
+
+.replyItem {
+  // border-left: 3px solid $secondaryDark;
+  &::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 0;
+    width: 2px;
+    height: calc(100% + $baseOffset);
+    background-color: $secondary;
+  }
+  &:last-child {
+    // border-bottom: 2px solid $secondary;
+    &::after {
+      height: 100%;
+    }
+  }
+}
+
+.commentAvatar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.commentContainer {
+  position: relative;
+  width: 100%;
+}
+
+.commentHeader {
+  display: flex;
+  margin: 5px 0;
+  font-size: 12px;
+}
+
+.commentNickname {
+  color: $apple;
+  margin-right: $baseOffset;
+}
+
+.commetnDate {
+  color: $AmericanSilver;
+}
+
+.commentData {
+  width: 100%;
+  color: $EerieBlack;
+  margin: 5px 0;
+}
+
+.commentFooter {
+  display: flex;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.commentStat {
+  margin-right: $baseOffset;
+  color: inherit;
+}
+
+.apple {
+  color: $apple;
+}
+.red {
+  color: red;
+}
+
+.commentIcon {
+  margin: 0 10px;
+  color: $grey;
+  cursor: pointer;
+
+  &:hover {
+    color: $apple;
+  }
+}
+
+.commentReply {
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: $cornflowerBlue;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    border-top: 1px dashed $cornflowerBlue;
+  }
+}
+
+.replyContainer {
+  position: relative;
+  //   width: 100%;
+}

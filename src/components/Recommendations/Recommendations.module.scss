@@ -1,0 +1,113 @@
+@import "../../style/vars";
+@import "../../style/mixins";
+
+.recommendations {
+  color: $primary;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.recomContainer {
+  position: relative;
+  margin: 0 -20px;
+  padding: $baseOffset;
+  width: 100%;
+  background-color: #111;
+}
+
+.recomTilte {
+  font-size: 1.3em;
+  margin-bottom: $baseOffset;
+}
+
+.recomLinks {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.recomLinkItem {
+  position: relative;
+  display: block;
+  width: 170px;
+  margin-bottom: $baseOffset;
+  color: inherit;
+  background-color: $primary;
+
+  & + & {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    .linkHoverPlate {
+      opacity: 0.8;
+    }
+  }
+}
+
+.recitem {
+  position: relative;
+  width: 100%;
+  padding-bottom: 150%;
+}
+
+.link,
+.linkHoverPlate,
+.linkImage {
+  @include posa;
+}
+
+.link {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+}
+
+.linkHoverPlate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $apple;
+  font-size: 1.7em;
+
+  background-color: $EerieBlack;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.linkImage {
+  position: relative;
+  img {
+    @include posa;
+    object-fit: cover;
+  }
+}
+
+.info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: calc(100% - 20px);
+  padding: 10px;
+  font-size: 0.9em;
+}
+.infoTitle {
+  text-align: center;
+}
+
+.infoStats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.orange {
+  color: $Orange;
+}
+
+.yellow {
+  color: $TangerineYellow;
+}
