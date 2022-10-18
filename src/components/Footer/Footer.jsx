@@ -3,7 +3,6 @@ import React from "react";
 import st from "./Footer.module.scss";
 
 function Footer({ children, logo, logoWidth, logoHeight }) {
-  console.log(logo);
   return (
     <div className={st.footer}>
       <div className={st.footerContainer}>

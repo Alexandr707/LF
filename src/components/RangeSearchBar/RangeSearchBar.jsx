@@ -1,4 +1,5 @@
 import React from "react";
+import debounce from "../../modules/debounce.js";
 import MouseMove from "../MouseMove/MouseMove.jsx";
 
 import st from "./RangeSearchBar.module.scss";
@@ -16,18 +17,36 @@ function RangeSearchBar({ getRange, min = 0, max = 1, info = "", ...props }) {
 
   const [mPos, setPos] = React.useState({});
   const [isMoveable, setMoveable] = React.useState(false);
-  const [isRedy, setRedy] = React.useState(false);
 
   const [type, setType] = React.useState("");
 
   const root = React.useRef();
-  const coord = root.current?.getBoundingClientRect();
+  const [coord, setCoord] = React.useState({});
+
+  root.current && console.log(root.current.style);
+
+  const reszieHandler = debounce(
+    () => {
+      const rect = root.current?.getBoundingClientRect();
+      console.log("resize", rect);
+      setCoord(rect);
+    },
+    1000,
+    { trailing: true }
+  );
 
   React.useEffect(() => {
-    if (root.current) {
-      setRedy(true);
-    }
+    window.addEventListener("resize", reszieHandler);
+    reszieHandler();
+
+    return () => {
+      window.removeEventListener("resize", reszieHandler);
+    };
   }, []);
+
+  if (root.current && !root.current.hidden && coord.width === 0 && props.isVisible) {
+    reszieHandler();
+  }
 
   React.useEffect(() => {
     if (isMoveable) {

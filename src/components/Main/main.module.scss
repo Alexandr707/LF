@@ -86,6 +86,7 @@
       &.expand {
         .expandBlock {
           display: block;
+          visibility: visible;
         }
       }
     }
@@ -95,6 +96,7 @@
 .expandBlock {
   @media (max-width: 950px) {
     display: none;
+    visibility: hidden;
   }
 }
 

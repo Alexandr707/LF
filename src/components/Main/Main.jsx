@@ -72,8 +72,8 @@ function Main() {
                   />
                 </div>
                 <div className={mcss.fbSearchInputs}>
-                  <RangeSearchBar min={2000} max={2020} step={1} getRange={setYear} info="Год" />
-                  <RangeSearchBar min={0} max={10} step={1} getRange={setRate} info="КП" />
+                  <RangeSearchBar min={2000} max={2020} step={1} getRange={setYear} info="Год" isVisible={openBtn} />
+                  <RangeSearchBar min={0} max={10} step={1} getRange={setRate} info="КП" isVisible={openBtn} />
                 </div>
 
                 <div className={mcss.fbSearchCheckboxs}>
