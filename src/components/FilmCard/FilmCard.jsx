@@ -15,6 +15,7 @@ function FilmCard({ imageSRC, title, like, dislike }) {
           </span>
           <span className={st.fSocialCount}>{like}</span>
         </div>
+
         <div className={st.fDislike}>
           <span className={[st.fIcon, st.fIcon_right].join(" ")}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -22,6 +23,27 @@ function FilmCard({ imageSRC, title, like, dislike }) {
             </svg>
           </span>
           <span className={st.fSocialCount}>{dislike}</span>
+        </div>
+
+        <div className={st.likesRelation}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+            clipPathUnits={"objectBoundingBox"}
+            className={st.svg}
+          >
+            <circle className={st.cBack} cx={50} cy={50} r={50} />
+            <circle className={st.cBackStroke} cx={50} cy={50} r={40} strokeWidth={10} />
+            <circle
+              className={st.cBackStrokePer}
+              cx={50}
+              cy={50}
+              r={40}
+              strokeWidth={10}
+              style={{ strokeDashoffset: 314 - (like / (like + dislike)) * 314 + "px" }}
+            />
+          </svg>
+          {((like / (like + dislike)) * 10).toFixed(1)}
         </div>
       </div>
     </div>

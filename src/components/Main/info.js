@@ -3,7 +3,7 @@ import imageSRC from "../../assets/poster.jpg";
 
 const info = {
   imageSRC,
-  like: 87,
+  like: 80,
   dislike: 130,
   title: "Двойное удовольствие (2022) смотреть онлайн",
   description:
