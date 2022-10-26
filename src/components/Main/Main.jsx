@@ -9,7 +9,7 @@ import FilmInfo from "../FilmInfo/FilmInfo.jsx";
 import FilmCard from "../FilmCard/FilmCard.jsx";
 import Player from "../Player/Player.jsx";
 
-import mp4 from "../../assets/video/слайд_шоу.mp4";
+// import mp4 from "../../assets/video/слайд_шоу.mp4";
 import EmojiRating from "../EmojiRating/EmojiRating.jsx";
 import CommentBlock from "../CommentBlock/CommentBlock.jsx";
 import Recommendations from "../Recommendations/Recommendations.jsx";
@@ -90,7 +90,7 @@ function Main() {
           </div>
         </div>
       </div>
-      <Player url={mp4} />
+      <Player url={""} />
       <EmojiRating />
       <CommentBlock />
       <Recommendations />
