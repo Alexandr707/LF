@@ -40,7 +40,7 @@ function FilmCard({ imageSRC, title, like, dislike }) {
               cy={50}
               r={40}
               strokeWidth={10}
-              style={{ strokeDashoffset: 314 - (like / (like + dislike)) * 314 + "px" }}
+              style={{ strokeDashoffset: 252 - (like / (like + dislike)) * 252 + "px" }}
             />
           </svg>
           {((like / (like + dislike)) * 10).toFixed(1)}
