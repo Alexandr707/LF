@@ -1,8 +1,8 @@
 import React from "react";
 
-import comments from "./comments.js";
-import Comment from "../Comment/Comment.jsx";
-import NewComment from "../NewComment/NewComment.jsx";
+import comments from "./comments";
+import Comment from "../Comment/Comment";
+import NewComment from "../NewComment/NewComment";
 import st from "./CommentBlock.module.scss";
 
 function CommentBlock() {
