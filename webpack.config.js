@@ -45,10 +45,12 @@ module.exports = {
     rules: [
       {
         test: /\.html$/i,
+        exclude: /(node_modules)/,
         loader: "html-loader",
       },
       {
         test: /\.s[ac]ss$/i,
+        exclude: /(node_modules)/,
         use: [
           MiniCssExtractPlugin.loader,
           { loader: "css-loader", options: { modules: { localIdentName: className } } },
@@ -65,11 +67,13 @@ module.exports = {
       },
       {
         test: /\.(ttf|woff2?)$/,
+        exclude: /(node_modules)/,
         type: "asset/resource",
         generator: { filename: "fonts/[name][ext]" },
       },
       {
         test: /\.(gif|png|jpe?g|svg|webp)$/i,
+        exclude: /(node_modules)/,
         use: [
           {
             loader: "file-loader",
