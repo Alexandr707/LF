@@ -1,3 +1,3 @@
 # LF
 
-https://main--alexpf-lordf.netlify.app/
+https://tangerine-semifreddo-067e9e.netlify.app/
