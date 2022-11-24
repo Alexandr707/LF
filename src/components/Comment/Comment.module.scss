@@ -2,22 +2,22 @@
 
 .commentItem {
   position: relative;
-  width: 100%;
+  width: calc(100% - 40px);
   padding-left: 40px;
   margin-bottom: $baseOffset;
 }
 
 .replyItem {
   // border-left: 3px solid $secondaryDark;
-  &::after {
-    content: "";
-    position: absolute;
-    left: -10px;
-    top: 0;
-    width: 2px;
-    height: calc(100% + $baseOffset);
-    background-color: $secondary;
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   left: -10px;
+  //   top: 0;
+  //   width: 2px;
+  //   height: calc(100% + $baseOffset);
+  //   background-color: $secondary;
+  // }
   &:last-child {
     // border-bottom: 2px solid $secondary;
     &::after {

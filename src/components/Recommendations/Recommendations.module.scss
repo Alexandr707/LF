@@ -24,10 +24,31 @@
 .recomLinks {
   box-sizing: border-box;
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  display: grid;
+  grid-gap: 10;
   width: 100%;
+  @media (min-width: 0) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media (min-width: 420px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (min-width: 800px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (min-width: 950px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  @media (min-width: 1100px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 .recomLinkItem {
