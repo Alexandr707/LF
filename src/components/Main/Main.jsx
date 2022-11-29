@@ -9,7 +9,6 @@ import FilmInfo from "../FilmInfo/FilmInfo.jsx";
 import FilmCard from "../FilmCard/FilmCard.jsx";
 import Player from "../Player/Player.jsx";
 
-// import mp4 from "../../assets/video/слайд_шоу.mp4";
 import EmojiRating from "../EmojiRating/EmojiRating.jsx";
 import CommentBlock from "../CommentBlock/CommentBlock.jsx";
 import Recommendations from "../Recommendations/Recommendations.jsx";
@@ -43,12 +42,17 @@ function Main() {
               <FilmCard {...info} />
             </div>
             <hr className={mcss.hrMain} />
-            <div className={mcss.fSubtitle}>{"Смотреть Двойное удовольствие в HD 720-1080 хорошем качестве"}</div>
+            <div className={mcss.fSubtitle}>
+              {"Смотреть Двойное удовольствие в HD 720-1080 хорошем качестве"}
+            </div>
           </div>
           {/* right */}
           <div className={[mcss.fRight, openBtn ? mcss.expand : ""].join(" ")}>
             <div className={mcss.openSearch}>
-              <Button onClick={() => setOpen((prev) => !prev)}> Поиск по параметрам</Button>
+              <Button onClick={() => setOpen((prev) => !prev)}>
+                {" "}
+                Поиск по параметрам
+              </Button>
             </div>
             <div className={mcss.expandBlock}>
               <div className={mcss.fRightTitle}>Поиск по параметрам</div>
@@ -72,15 +76,41 @@ function Main() {
                   />
                 </div>
                 <div className={mcss.fbSearchInputs}>
-                  <RangeSearchBar min={2000} max={2020} step={1} getRange={setYear} info="Год" isVisible={openBtn} />
-                  <RangeSearchBar min={0} max={10} step={1} getRange={setRate} info="КП" isVisible={openBtn} />
+                  <RangeSearchBar
+                    min={2000}
+                    max={2020}
+                    step={1}
+                    getRange={setYear}
+                    info="Год"
+                    isVisible={openBtn}
+                  />
+                  <RangeSearchBar
+                    min={0}
+                    max={10}
+                    step={1}
+                    getRange={setRate}
+                    info="КП"
+                    isVisible={openBtn}
+                  />
                 </div>
 
                 <div className={mcss.fbSearchCheckboxs}>
-                  <CheckBox Label="Фильмы" onChange={() => setFilms((prev) => !prev)} />
-                  <CheckBox Label="Сериалы" onChange={() => setSerials((prev) => !prev)} />
-                  <CheckBox Label="Мультфильмы" onChange={() => setCartoons((prev) => !prev)} />
-                  <CheckBox Label="Аниме" onChange={() => setAnime((prev) => !prev)} />
+                  <CheckBox
+                    Label="Фильмы"
+                    onChange={() => setFilms((prev) => !prev)}
+                  />
+                  <CheckBox
+                    Label="Сериалы"
+                    onChange={() => setSerials((prev) => !prev)}
+                  />
+                  <CheckBox
+                    Label="Мультфильмы"
+                    onChange={() => setCartoons((prev) => !prev)}
+                  />
+                  <CheckBox
+                    Label="Аниме"
+                    onChange={() => setAnime((prev) => !prev)}
+                  />
                 </div>
 
                 <Button name="поиск" />
@@ -95,8 +125,9 @@ function Main() {
       <CommentBlock />
       <Recommendations />
       <Footer logo={logo} logoWidth={180} logoHeight={70}>
-        Все видео взяты из открытых источников. Если обнаружите материал, который нарушает авторское право - пишите на
-        почту, сразу удалим! Контакты для жалоб: <b>abuse@lordfilm.lu</b>
+        Все видео взяты из открытых источников. Если обнаружите материал,
+        который нарушает авторское право - пишите на почту, сразу удалим!
+        Контакты для жалоб: <b>abuse@lordfilm.lu</b>
       </Footer>
     </div>
   );
